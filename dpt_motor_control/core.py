@@ -81,6 +81,11 @@ class MotorControl:
 if __name__ == '__main__':
     mc = MotorControl(A, B, C, D)
     sleep(1)
-    mc.steps_x4(100)
+    while True:
+        try:
+            user_steps = int(input())
+        except ValueError:
+            break
+        mc.steps_x4(user_steps)
+
     sleep(1)
-    GPIO.cleanup()
