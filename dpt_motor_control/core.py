@@ -92,8 +92,8 @@ if __name__ == '__main__':
                        text="QUIT",
                        fg="red",
                        command=quit,
-                       height=100,
-                       width=100,
+                       height=10,
+                       width=10,
                        )
     button.pack(side=tk.LEFT)
     slogan = tk.Button(frame,
