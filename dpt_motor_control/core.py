@@ -10,7 +10,7 @@ D = 19
 
 
 GPIO.setmode(GPIO.BCM)
-DELAY = 0.005
+DELAY = 0.002
 
 
 class MotorControl:
