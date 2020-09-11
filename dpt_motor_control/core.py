@@ -59,7 +59,7 @@ class MotorControl:
         print('Cleaning GPIO...')
         GPIO.cleanup()
 
-    def steps_x4(self, steps):
+    def steps_x4(self, steps=85):
         """steps_x4
 
         :return:
@@ -95,7 +95,7 @@ if __name__ == '__main__':
     button.pack(side=tk.LEFT)
     slogan = tk.Button(frame,
                        text="Hello",
-                       command=mc.steps_x4(85))
+                       command=mc.steps_x4)
     slogan.pack(side=tk.LEFT)
 
     root.mainloop()
