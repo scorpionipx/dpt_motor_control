@@ -85,7 +85,7 @@ if __name__ == '__main__':
     sleep(1)
 
     root = tk.Tk()
-    frame = tk.Frame(root)
+    frame = tk.Frame(root, width=600, height=400)
     frame.pack()
 
     button = tk.Button(frame,
@@ -94,7 +94,7 @@ if __name__ == '__main__':
                        command=quit)
     button.pack(side=tk.LEFT)
     slogan = tk.Button(frame,
-                       text="Hello",
+                       text="+180",
                        command=mc.steps_x4)
     slogan.pack(side=tk.LEFT)
 
