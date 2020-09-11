@@ -1,3 +1,5 @@
+import tkinter as tk
+
 import RPi.GPIO as GPIO
 
 from time import sleep
@@ -81,11 +83,28 @@ class MotorControl:
 if __name__ == '__main__':
     mc = MotorControl(A, B, C, D)
     sleep(1)
-    while True:
-        try:
-            user_steps = int(input())
-        except ValueError:
-            break
-        mc.steps_x4(user_steps)
 
-    sleep(1)
+    root = tk.Tk()
+    frame = tk.Frame(root)
+    frame.pack()
+
+    button = tk.Button(frame,
+                       text="QUIT",
+                       fg="red",
+                       command=quit)
+    button.pack(side=tk.LEFT)
+    slogan = tk.Button(frame,
+                       text="Hello",
+                       command=mc.steps_x4(85))
+    slogan.pack(side=tk.LEFT)
+
+    root.mainloop()
+
+    # while True:
+    #     try:
+    #         user_steps = int(input())
+    #     except ValueError:
+    #         break
+    #     mc.steps_x4(user_steps)
+    #
+    # sleep(1)
