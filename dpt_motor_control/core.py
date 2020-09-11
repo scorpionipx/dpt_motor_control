@@ -86,7 +86,7 @@ if __name__ == '__main__':
 
     root = tk.Tk()
     frame = tk.Frame(root, width=600, height=400)
-    frame.pack()
+    frame.pack(fill=None, expand=False)
 
     button = tk.Button(frame,
                        text="QUIT",
