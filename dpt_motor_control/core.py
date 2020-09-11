@@ -91,11 +91,16 @@ if __name__ == '__main__':
     button = tk.Button(frame,
                        text="QUIT",
                        fg="red",
-                       command=quit)
+                       command=quit,
+                       height=100,
+                       width=100,
+                       )
     button.pack(side=tk.LEFT)
     slogan = tk.Button(frame,
                        text="+180",
-                       command=mc.steps_x4)
+                       command=mc.steps_x4,
+                       height=100,
+                       width=100,)
     slogan.pack(side=tk.LEFT)
 
     root.mainloop()
