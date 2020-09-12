@@ -130,27 +130,27 @@ if __name__ == '__main__':
                        text="QUIT",
                        fg="red",
                        command=quit,
-                       height=10,
-                       width=10,
+                       height=15,
+                       width=15,
                        )
     button.pack(side=tk.LEFT)
     minus_5 = tk.Button(frame,
                        text="LEFT",
                        command=mc.rotate_minus_20_steps,
-                       height=10,
-                       width=10,)
+                       height=15,
+                       width=15,)
     minus_5.pack(side=tk.LEFT)
     slogan = tk.Button(frame,
                        text="+180",
                        command=mc.rotate_180,
-                       height=10,
-                       width=10,)
+                       height=15,
+                       width=15,)
     slogan.pack(side=tk.LEFT)
     plus_5 = tk.Button(frame,
                        text="RIGHT",
                        command=mc.rotate_20_steps,
-                       height=10,
-                       width=10,)
+                       height=15,
+                       width=15,)
     plus_5.pack(side=tk.LEFT)
 
     root.mainloop()
