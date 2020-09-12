@@ -85,6 +85,12 @@ class MotorControl:
         """
         self.steps_x4(85)
 
+    def rotate_20_steps(self):
+        """rotate_20_steps
+
+        """
+        self.steps_x4(5)
+
 
 if __name__ == '__main__':
     mc = MotorControl(A, B, C, D)
@@ -110,7 +116,7 @@ if __name__ == '__main__':
     slogan.pack(side=tk.LEFT)
     plus_5 = tk.Button(frame,
                        text="RIGHT",
-                       command=mc.rotate_180,
+                       command=mc.rotate_20_steps,
                        height=10,
                        width=10,)
     plus_5.pack(side=tk.LEFT)
