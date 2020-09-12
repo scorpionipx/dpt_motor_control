@@ -79,6 +79,26 @@ class MotorControl:
             GPIO.output(self.D, True)
             sleep(DELAY)
 
+    def steps_minus_x4(self, steps=85):
+        """steps_minus_x4
+
+        :return:
+        """
+        for step_index in range(steps):
+            sleep(DELAY)
+            self.all_off()
+            GPIO.output(self.D, True)
+            sleep(DELAY)
+            self.all_off()
+            GPIO.output(self.B, True)
+            sleep(DELAY)
+            self.all_off()
+            GPIO.output(self.C, True)
+            sleep(DELAY)
+            self.all_off()
+            GPIO.output(self.A, True)
+            sleep(DELAY)
+
     def rotate_180(self):
         """rotate_180
 
@@ -90,6 +110,12 @@ class MotorControl:
 
         """
         self.steps_x4(5)
+
+    def rotate_minus_20_steps(self):
+        """rotate_minus_20_steps
+
+        """
+        self.steps_minus_x4(5)
 
 
 if __name__ == '__main__':
@@ -108,6 +134,12 @@ if __name__ == '__main__':
                        width=10,
                        )
     button.pack(side=tk.LEFT)
+    minus_5 = tk.Button(frame,
+                       text="LEFT",
+                       command=mc.rotate_minus_20_steps,
+                       height=10,
+                       width=10,)
+    minus_5.pack(side=tk.LEFT)
     slogan = tk.Button(frame,
                        text="+180",
                        command=mc.rotate_180,
