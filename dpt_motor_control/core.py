@@ -138,7 +138,6 @@ if __name__ == '__main__':
     button_dummy = tk.Button(frame,
                              text="",
                              fg="red",
-                             command=quit,
                              height=15,
                              width=5,
                             )
@@ -150,12 +149,28 @@ if __name__ == '__main__':
                        height=15,
                        width=15,)
     minus_5.pack(side=tk.LEFT)
+
+    button_dummy = tk.Button(frame,
+                             text="",
+                             fg="red",
+                             height=15,
+                             width=1,
+                            )
+    button_dummy.pack(side=tk.LEFT)
     slogan = tk.Button(frame,
                        text="+180",
                        command=mc.rotate_180,
                        height=15,
                        width=15,)
     slogan.pack(side=tk.LEFT)
+
+    button_dummy = tk.Button(frame,
+                             text="",
+                             fg="red",
+                             height=15,
+                             width=1,
+                            )
+    button_dummy.pack(side=tk.LEFT)
     plus_5 = tk.Button(frame,
                        text="RIGHT",
                        command=mc.rotate_20_steps,
