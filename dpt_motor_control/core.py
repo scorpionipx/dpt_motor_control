@@ -79,6 +79,12 @@ class MotorControl:
             GPIO.output(self.D, True)
             sleep(DELAY)
 
+    def rotate_180(self):
+        """rotate_180
+
+        """
+        self.steps_x4(85)
+
 
 if __name__ == '__main__':
     mc = MotorControl(A, B, C, D)
@@ -98,10 +104,16 @@ if __name__ == '__main__':
     button.pack(side=tk.LEFT)
     slogan = tk.Button(frame,
                        text="+180",
-                       command=mc.steps_x4,
+                       command=mc.rotate_180,
                        height=100,
                        width=100,)
     slogan.pack(side=tk.LEFT)
+    plus_5 = tk.Button(frame,
+                       text="RIGHT",
+                       command=mc.rotate_180,
+                       height=100,
+                       width=100,)
+    plus_5.pack(side=tk.LEFT)
 
     root.mainloop()
 
