@@ -134,6 +134,16 @@ if __name__ == '__main__':
                        width=15,
                        )
     button.pack(side=tk.LEFT)
+
+    button_dummy = tk.Button(frame,
+                             text="",
+                             fg="red",
+                             command=quit,
+                             height=15,
+                             width=5,
+                            )
+    button_dummy.pack(side=tk.LEFT)
+
     minus_5 = tk.Button(frame,
                        text="LEFT",
                        command=mc.rotate_minus_20_steps,
