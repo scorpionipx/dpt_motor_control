@@ -4,6 +4,8 @@ import RPi.GPIO as GPIO
 
 from time import sleep
 
+from os import system
+
 
 A = 5
 B = 6
@@ -117,6 +119,13 @@ class MotorControl:
         """
         self.steps_minus_x4(5)
 
+    @staticmethod
+    def shutdown():
+        """shutdown
+
+        """
+        system('shutdown -h now')
+
 
 if __name__ == '__main__':
     mc = MotorControl(A, B, C, D)
@@ -129,7 +138,7 @@ if __name__ == '__main__':
     button = tk.Button(frame,
                        text="QUIT",
                        fg="red",
-                       command=quit,
+                       command=mc.shutdown,
                        height=15,
                        width=15,
                        )
